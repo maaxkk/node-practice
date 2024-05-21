@@ -1,0 +1,8 @@
+stripe-checkout/.env
+stripe-checkout/response.json
+stripe-checkout/node_modules
+
+my-first-node-app/.env
+my-first-node-app/node_modules
+
+informationSite/.env
