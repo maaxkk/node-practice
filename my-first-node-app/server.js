@@ -3,10 +3,12 @@ const {createServer} = require('node:http')
 const writeFiles = require('./writingFiles/writeFiles');
 const readFiles = require('./readingFiles/readFile')
 const sendEmail = require('./sendEmail/server')
+const {getPath} = require('./path/path')
 const getURL = require('./path/path')
 const eventLearning = require('./event/event')
 const url = require('url')
 const fs = require('node:fs');
+require('./file-system/file-system')
 
 const server = require('./uploadFiles/server')
 const hostname = '127.0.0.1';
@@ -15,8 +17,9 @@ const port = process.env.PORT;
 // writeFiles();
 // readFiles();
 // getURL();
+// getPath();
 // eventLearning()
-sendEmail();
+// sendEmail();
 
 
 // const server = createServer((req, res) => {

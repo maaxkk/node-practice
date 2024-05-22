@@ -6,3 +6,5 @@ my-first-node-app/.env
 my-first-node-app/node_modules
 
 informationSite/.env
+
+my-second-node-app/node_modules

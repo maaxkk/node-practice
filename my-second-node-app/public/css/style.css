@@ -1,0 +1,8 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: royalblue;
+    min-height: 100vh;
+    color: bisque;
+    display: flex;
+}
