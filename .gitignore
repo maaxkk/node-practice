@@ -2,9 +2,18 @@ stripe-checkout/.env
 stripe-checkout/response.json
 stripe-checkout/node_modules
 
-my-first-node-app/.env
-my-first-node-app/node_modules
+node/my-first-node-app/.env
+node/my-first-node-app/node_modules
 
-informationSite/.env
+node/informationalSite/.env
 
 my-second-node-app/node_modules
+
+whatsapp-bot/node_modules
+whatsapp-bot/.wwebjs_auth
+whatsapp-bot/.env
+
+node/my-third-node-app/node_modules
+
+bot_back_front/server/node_modules
+bot_back_front/server/.env
