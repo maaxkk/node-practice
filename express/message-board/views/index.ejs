@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/new">Post message</a>
+    <p>Welcome to <%= title %></p>
+    <p><% messages.map(message =>{ %>
+            <p><%= message.text%></p>
+            <p><%= message.user%></p>
+            <p><%= message.added%></p>
+     <% }) %>
+    </p>
+  </body>
+</html>
