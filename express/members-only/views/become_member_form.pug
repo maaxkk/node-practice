@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/stylesheets/become_member.css')
+    body
+        form(method='POST' class='become_member__form')
+            h1(class='login__title')= 'Become member 📈'
+            label(for='secret_code')= 'Secret code 🔥'
+            input(type='text' class='become_member__input become_member__email' id='secret_code'  placeholder='0123')
+            input(type='submit' class='become_member__submit' value='Become member')

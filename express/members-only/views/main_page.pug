@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/stylesheets/main_page.css')
+    body
+        nav
+            ul(class='page__nav')
+                each section in mockSections
+                    li
+                        if section === 'Message board' || section === 'Home'
+                            a(href=`/` class='page__link')= section
+                        else if section === 'Become member'
+                            a(href='/user/becomeMember' class='page__link')= section
+                        else
+                            a(href=`/user/${section}` class='page__link')= section
+
+        form(method='POST' class='page__form')
+            input(type='text' class='page__input' placeholder='Title')
+            textarea(class='page__description' placeholder='Description')
+            input(type='submit' class='page__submit' value='Post')
+
+
+        section(class='page__container')
+            each articleEl, index in mockData
+                article
+                    h2= articleEl.title
+                    p= articleEl.description
+                    div(class='page__author_date')
+                        p= 'Unknown author'
+                        p= 'Unknown date'
+                    if index < mockData.length - 1
+                        hr

@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/stylesheets/login.css')
+    body
+        form(method='POST' class='login__form')
+            h1(class='login__title')= 'Login'
+            input(type='text' class='login__input login__username'  placeholder='Username')
+            input(type='text' class='login__input login__password' placeholder='Password')
+            input(type='submit' class='login__submit' value='Login')

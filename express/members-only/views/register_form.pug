@@ -1,0 +1,13 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/stylesheets/register.css')
+    body
+        form(method='POST' class='register__form')
+            h1(class='register__title')= 'Register'
+            input(type='text' name='username' class='register__input register__username'  placeholder='Username')
+            input(type='email' name='email' class='register__input register__email'  placeholder='Email')
+            input(type='text' name='password' class='register__input register__password' placeholder='Password')
+            input(type='submit' class='register__submit' value='Register')
