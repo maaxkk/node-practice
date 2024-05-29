@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const mockData = require('../utils/mockPosts');
+const { isAuth } = require('../middleware/authMiddleware');
 
 const userRouter = require('./userRouter');
-const mockSections = ['Message board', 'Home', 'Register', 'Login', 'Become member'];
+const postRouter = require('./postRouter');
 
 router.use('/user', userRouter);
+router.use('/post', postRouter);
 
-router.get('/', (req, res, next) => {
-    res.render('main_page', { mockData: mockData, mockSections: mockSections });
+router.get('/', isAuth, (req, res, next) => {
+    res.redirect('/post');
 });
 
 module.exports = router;

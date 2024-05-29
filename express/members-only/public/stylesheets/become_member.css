@@ -38,6 +38,19 @@ body {
     border-color: #555;
 }
 
+.become_member__errors {
+    padding: 0;
+    margin-top: -6px;
+}
+
+.become_member__error {
+    color: #f5930f;
+    font-size: 90%;
+    font-weight: bold;
+    list-style: none;
+    padding: 0;
+}
+
 .become_member__submit {
     background-color: #3498db;
     color: #fff;

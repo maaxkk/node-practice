@@ -20,6 +20,22 @@ body {
     border-radius: 1em;
 }
 
+.register__errors {
+    padding: 0;
+    margin-top: -6px;
+}
+
+.register__error {
+    color: red;
+    font-size: 90%;
+    list-style: none;
+    padding: 0;
+}
+
+.register__div_admin {
+    margin-bottom: 12px;
+}
+
 .register__title {
     text-align: center;
     color: #333;

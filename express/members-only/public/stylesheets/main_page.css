@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    margin: 0;
+    margin: 2em;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,6 @@ body {
 }
 
 .page__form {
-    margin-top: 1em;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -39,9 +38,36 @@ body {
     max-width: 500px;
     max-height: 100vh;
     overflow: scroll;
-    border-radius: 1em;
     margin-bottom: 2em;
-    gap: 1em;
+    border-radius: 1em;
+}
+
+.page__title_delete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page__delete {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ff0000;
+}
+
+.page__delete:hover {
+    color: #cc0000;
+}
+
+.page__errors {
+    padding: 0;
+    margin-top: -6px;
+}
+
+.page__error {
+    color: red;
+    font-size: 90%;
+    list-style: none;
+    padding: 0;
 }
 
 .page__input {
@@ -49,6 +75,7 @@ body {
     outline: none;
     padding: 10px;
     border-radius: 4px;
+    margin-bottom: 12px;
     border: 1px solid #ddd;
 }
 
@@ -61,6 +88,7 @@ body {
     outline: none;
     padding: 10px;
     border-radius: 4px;
+    margin-bottom: 12px;
     border: 1px solid #ddd;
 }
 

@@ -14,6 +14,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'mongo connection error'));
 
 const app = express();
+app.locals.moment = require('moment');
 
 // SET
 app.set('views', path.join(__dirname, 'views'));
@@ -30,7 +31,6 @@ require('./middleware/passport');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/', router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(
     session({
@@ -44,6 +44,7 @@ app.use(
     })
 );
 app.use(passport.session());
+app.use('/', router);
 
 // LISTEN
 app.listen(3000, () => console.log('app listening on port 3000, open http://localhost:3000'));

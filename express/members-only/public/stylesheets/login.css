@@ -20,6 +20,18 @@ body {
     border-radius: 1em;
 }
 
+.login__errors {
+    padding: 0;
+    margin-top: -6px;
+}
+
+.login__error {
+    color: red;
+    font-size: 90%;
+    list-style: none;
+    padding: 0;
+}
+
 .login__title {
     text-align: center;
     color: #333;
