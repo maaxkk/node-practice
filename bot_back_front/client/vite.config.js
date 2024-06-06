@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5000', // local
-        // target: 'http://server:5000', // docker
+        target: 'http://localhost:3000', // local
+        // target: 'http://server:3000', // docker
         secure: false,
       },
     },

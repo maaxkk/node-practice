@@ -1,19 +1,25 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express  from 'express'
 import mongoose from 'mongoose'
 import router from "./router.js";
-import fileUpload from 'express-fileupload';
-import dotenv from 'dotenv';
+import handleError from './errorHandling.js';
+import cors from 'cors';
 
-dotenv.config();
-const PORT = 5000;
+const PORT = 3000;
 const DB_URL = `${process.env.DB_URL}`;
 
 const app = express();
+app.use(cors({
+    credentials: true,
+    origin: [process.env.CLIENT_URL, process.env.CLIENT_ADMIN_URL],
+}));
 app.use(express.json())
 app.use(express.static('static'))
-app.use(fileUpload({}))
 app.use('/api', router)
 
+
+app.use(handleError)
 
 async function startApp() {
     try {

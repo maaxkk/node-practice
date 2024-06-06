@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
 
 const Ad = new mongoose.Schema({
-    imgSrc: {type: String, required: true},
+    title: {type: String, required: true},
     description: {type: String, required: true},
-}, {collection: 'ads'})
+    mainImg: {type: String, required: true},
+    additionalImg: {type: [String]},
+})
 
 export default mongoose.model('Ad', Ad)

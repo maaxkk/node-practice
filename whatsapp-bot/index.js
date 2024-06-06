@@ -32,8 +32,8 @@ client.once('ready', async () => {
     const changeStream = collection.watch();
     changeStream.on('change', async (change) => {
         console.log('Database change detected:', change);
-        const content = change.fullDocument.description;
-        const media = await MessageMedia.fromUrl(change.fullDocument.imgSrc);
+        const content = `${change.fullDocument.title}\n\n${change.fullDocument.description}`;
+        const media = await MessageMedia.fromUrl(change.fullDocument.mainImg);
         await client.sendMessage(channelId, media, { caption: content });
         console.log('Message sent due to database change');
     });
